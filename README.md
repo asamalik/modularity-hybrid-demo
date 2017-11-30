@@ -106,7 +106,13 @@ Modularizing a new version would skip the "register a default" step.
 
 Modules would not need specify any runtime modular dependencies in order to use packages from the Base. Modules can have a  modular dependencies specified in case a non-default stream is needed.
 
+## New features in Fedora 29
 
+Fedora 29 would be a second modular release. Using the same source to build modules for both (F28 and F29) release would be quite useful. A new discussed feature called **stream expansion** would allow us to do exactly that.
+
+<img src="imgs/f29-stream-expansion.png" width="700px">
+
+Defining a modulemd would be in fact a "configuration" in the beginning in order to build the same source for multiple releases. And thanks to **Freshmaker**, packager would only need to push to a single branch to update their package in all releases. The builds would happen automatically.
 
 
 
