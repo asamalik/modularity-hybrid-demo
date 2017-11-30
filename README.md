@@ -97,10 +97,10 @@ Packages in the default modules would need to have at least the same EOL and at 
 
 Modularizing a new version would skip the "register a default" step.
 
-**To register a default** means:
+**To register a default** would mean:
 
 1. Tagging the module stream into the F28 buildroot
-2. Adding the module stream into the F27 system profile
+2. Adding the module stream into the F28 system profile
 
 ### Dealing with runtime dependencie
 
