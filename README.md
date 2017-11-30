@@ -58,6 +58,54 @@ v8.9.1
 
 Woot!
 
+## Implementation in Fedora 28
+
+These are thoughts how we could implement it in Fedora 28.
+
+### The end result
+
+<img src="imgs/f28-arch.png" width="350px">
+
+**Two repositories**
+
+1. Fedora 28 Everything (Base) - all traditional RPM packages
+2. Fedora 28 Modular Updates (Modules) - all modules, through Bodhi
+
+We would also need to get the modular DNF into F28 mainline.
+
+### Building
+
+<img src="imgs/f28-buildroot.png" width="350px">
+
+Modules and RPM packages should be built aganst the same buildroot - the Fedora 28 Buildroot.
+
+RPM packages in the Base would be built the same way as they are now, with no changes.
+
+Modules would be built using MBS agains a "buildroot" module that would be created in a simmilar way to the existing "bootstrap" module. It would contain all packages from the Base and default streams of modules.
+
+Modules would be significantly smaller than they were in the original approach, containing only the packages of a given application or stack.
+
+Packages in the default modules would need to have at least the same EOL and at least the same ABI stability guarantees as other packages in the release.
+
+### New terminology
+
+**To modularize something** would mean taking these steps:
+
+1. Make and build a module out of existing packages in Base
+2. Register its stream as a default for the release (explained below)
+3. Send an update through Bodhi
+
+Modularizing a new version would skip the "register a default" step.
+
+**To register a default** means:
+
+1. Tagging the module stream into the F28 buildroot
+2. Adding the module stream into the F27 system profile
+
+### Dealing with runtime dependencie
+
+Modules would not need specify any runtime modular dependencies in order to use packages from the Base. Modules can have a  modular dependencies specified in case a non-default stream is needed.
+
 
 
 
