@@ -1,0 +1,4 @@
+[nodejs]
+name=nodejs
+stream=8
+profiles=default

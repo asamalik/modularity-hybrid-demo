@@ -1,0 +1,6 @@
+[modules]
+name = Modules
+baseurl = https://asamalik.fedorapeople.org/modularity-hybrid-demo/repos/modules/
+enabled = 1
+gpgcheck = 0
+priority = 90

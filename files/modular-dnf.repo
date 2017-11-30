@@ -1,0 +1,5 @@
+[modular-dnf]
+name = DNF with Modularity support
+baseurl = https://asamalik.fedorapeople.org/modularity-hybrid-demo/repos/dnf/
+enabled = 1
+gpgcheck = 0
