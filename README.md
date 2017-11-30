@@ -1,4 +1,4 @@
-# Fedora 27 - Hybrid Modular Demo
+# Fedora 27 - Hybrid Modular Demo and Proposal
 
 <img src="imgs/hybrid-modularity-banner.png" width="725px">
 
