@@ -114,8 +114,18 @@ Fedora 29 would be a second modular release. Using the same source to build modu
 
 Defining a modulemd would be in fact a "configuration" in the beginning in order to build the same source for multiple releases. And thanks to **Freshmaker**, packager would only need to push to a single branch to update their package in all releases. The builds would happen automatically.
 
+## Credits
 
+I wrote this based on discussion of many people in the [#fedora-modularity](irc://freenode/fedora-modularity) irc channel.
 
+Another examples created (hours) before this one:
 
+1. First was [dockerhub/jamesantill/f27-mods](https://hub.docker.com/r/jamesantill/f27-mods/) container image by James Antill that added all Fedora 27 Server Beta modules on top of traditional F27 release. DNF in this example is extremely slow as the current implementation can't deal with so many modules.
+2. Second was [github/sgallagher/semimodular_poc](https://github.com/sgallagher/semimodular_poc) Ansible playbook by Stephen Gallagher that adds two modules (Node.js 6 and Node.js 8) on top of any Fedora 27 system. You need to have a running system somewhere to try this.
+3. Third was [dockerhub/langdon/semimodular-poc](https://hub.docker.com/r/langdon/semimodular-poc/ container image by Langdon White which is a result of running the previously mentioned Ansible playbook against an F27 container image. This image is relatively large in size as it bundles the two Node.js modules.
+
+This repository presents a minimalist working example based on all of the above.
+
+It is not a done thing, much better followup created by the group is coming out soon. Thanks all for ideas and discussions!
 
 
