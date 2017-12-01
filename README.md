@@ -1,5 +1,12 @@
 # Fedora 27 - Hybrid Modular Demo and Proposal
 
+[Demo](#interactive-demo) |
+[F28 Proposal](#implementation-in-fedora-28) |
+[F29 Proposal](#new-features-in-fedora-29) |
+[Credits](#credits)
+
+<hr>
+
 <img src="imgs/hybrid-modularity-banner.png" width="725px">
 
 A demo of using [Modularity](https://docs.pagure.org/modularity) on top of a traditional Fedora release.
